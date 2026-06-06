@@ -1,0 +1,183 @@
+---
+import Base from '../../layouts/Base.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Base
+  title="Privacy Policy — HadIt? | Tidy Apps"
+  description="HadIt? collects no data, uses no analytics, and sends nothing anywhere. Everything stays on your device."
+>
+  <Nav />
+
+  <main>
+    <div class="prose">
+      <header class="page-header">
+        <h1>Privacy Policy</h1>
+        <p class="subtitle">HadIt? &nbsp;&middot;&nbsp; Last updated: May 2025</p>
+      </header>
+
+      <div class="summary-box">
+        <p class="summary-label">The short version</p>
+        <p class="summary-text">
+          HadIt? collects nothing. Stores everything on your device. Sends nothing
+          anywhere. Ever.
+        </p>
+      </div>
+
+      <div class="policy-body">
+        <section class="policy-section">
+          <h2>Data Collection</h2>
+          <p>
+            HadIt? does not collect any personal data whatsoever. There are no analytics,
+            no crash reporting tools, no advertising SDKs, and no tracking of any kind
+            built into the app.
+          </p>
+        </section>
+
+        <section class="policy-section">
+          <h2>Data Storage</h2>
+          <p>
+            Everything you enter into HadIt? — item names, categories, notes, and photos
+            — is stored exclusively on your device using Apple's on-device storage.
+            Nothing is transmitted to any external server or third party.
+          </p>
+        </section>
+
+        <section class="policy-section">
+          <h2>Photos</h2>
+          <p>
+            Photos you add to items are stored on your device only. They are never
+            uploaded, shared, or accessed by anyone other than you. HadIt? requests
+            camera and photo library access solely to let you photograph your items —
+            for no other purpose.
+          </p>
+        </section>
+
+        <section class="policy-section">
+          <h2>Third Parties</h2>
+          <p>
+            HadIt? contains no third-party SDKs, analytics tools, advertising networks,
+            or any external services. There are zero third-party dependencies in the app.
+          </p>
+        </section>
+
+        <section class="policy-section">
+          <h2>iCloud &amp; Sync</h2>
+          <p>
+            HadIt? does not use iCloud, cloud sync, or any network service. Your data
+            never leaves your device.
+          </p>
+        </section>
+
+        <section class="policy-section">
+          <h2>Children's Privacy</h2>
+          <p>
+            HadIt? does not collect data from anyone, including children under 13.
+            Since no data is collected, the app is safe for all ages.
+          </p>
+        </section>
+
+        <section class="policy-section">
+          <h2>Changes to This Policy</h2>
+          <p>
+            If this policy ever changes, we will update this page and the date at the
+            top. We will never introduce data collection without clearly communicating
+            it here first.
+          </p>
+        </section>
+
+        <hr class="divider" />
+
+        <section class="policy-section">
+          <h2>Contact</h2>
+          <p>
+            Questions about this privacy policy? Reach us at{' '}
+            <a href="mailto:hello@tidy-apps.com">hello@tidy-apps.com</a>.
+          </p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</Base>
+
+<style>
+  main {
+    padding: var(--section-y) 0;
+  }
+
+  .page-header {
+    margin-bottom: 40px;
+  }
+
+  h1 {
+    font-size: clamp(32px, 4.5vw, 48px);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--color-text);
+    margin-bottom: 8px;
+  }
+
+  .subtitle {
+    font-size: 15px;
+    color: var(--color-text-secondary);
+  }
+
+  .summary-box {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    padding: 28px 32px;
+    margin-bottom: 48px;
+  }
+
+  .summary-label {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-text-secondary);
+    margin-bottom: 10px;
+  }
+
+  .summary-text {
+    font-size: 19px;
+    font-weight: 500;
+    color: var(--color-text);
+    line-height: 1.5;
+  }
+
+  .policy-body {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  .policy-section h2 {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-text-secondary);
+    margin-bottom: 12px;
+    line-height: 1.4;
+  }
+
+  .policy-section p {
+    font-size: 17px;
+    color: var(--color-text-secondary);
+    line-height: 1.65;
+  }
+
+  .policy-section a {
+    color: var(--color-accent);
+  }
+
+  .divider {
+    border: none;
+    border-top: 1px solid var(--color-border);
+    margin: 4px 0;
+  }
+</style>

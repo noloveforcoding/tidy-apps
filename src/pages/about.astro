@@ -1,0 +1,101 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Base
+  title="About — Tidy Apps"
+  description="Tidy Apps builds focused iOS apps with privacy at their core. One problem. Solved well. Native iOS, always."
+>
+  <Nav />
+
+  <main>
+    <article class="prose">
+      <header class="page-header">
+        <h1>Software that respects you.</h1>
+      </header>
+
+      <div class="body-text">
+        <p>
+          We build apps that do one thing. Not apps that try to be everything, earn
+          engagement, or lock you in. One clear problem, solved as well as we can solve
+          it. That constraint isn't a limitation — it's the point. Focus produces better
+          software. Small surfaces are easier to reason about, maintain, and use.
+        </p>
+
+        <p>
+          Privacy isn't a feature we add at the end. It's the constraint we design from.
+          Our apps don't have accounts because we don't need to identify you. They don't
+          have analytics because we built something to use, not to study. They don't send data
+          anywhere because your data belongs to you — on your device, under your control.
+          We believe that's how software should work by default.
+        </p>
+
+        <p>
+          That principle doesn't stop at the app. This website collects nothing about
+          you either. No cookies. No analytics. No third-party scripts of any kind.
+          We think that's worth saying out loud, because most sites don't.
+        </p>
+
+        <p>
+          We build exclusively for iOS, with native technologies: SwiftUI, UIKit,
+          CoreData. Not because we have to, but because it's the right way to build apps
+          for the platform. Native means fast, reliable, and respectful of the device's
+          design language. We're not interested in shipping something that works
+          everywhere. We want to ship something that feels exactly right on an iPhone.
+        </p>
+
+        <p>
+          Tidy means controlled. Small. Well-kept. We chose the name because it reflects
+          how we want to work — carefully, without excess, with respect for the person
+          using what we've made. An app that's tidy doesn't ask for more than it needs.
+          It doesn't grow beyond its purpose. It stays honest.
+        </p>
+
+        <p class="closing">
+          We're building a small portfolio of focused apps. Each one made to last.
+        </p>
+      </div>
+    </article>
+  </main>
+
+  <Footer />
+</Base>
+
+<style>
+  main {
+    padding: var(--section-y) 0;
+    min-height: calc(100dvh - 56px - 88px);
+  }
+
+  .page-header {
+    margin-bottom: 48px;
+  }
+
+  h1 {
+    font-size: clamp(32px, 4.5vw, 52px);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--color-text);
+  }
+
+  .body-text {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 1.65;
+    color: var(--color-text-secondary);
+  }
+
+  .closing {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--color-text);
+    margin-top: 16px;
+  }
+</style>

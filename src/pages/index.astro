@@ -1,0 +1,180 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import AppCard from '../components/AppCard.astro';
+---
+
+<Base
+  title="Tidy Apps — Focused iOS apps built with privacy at their core"
+  description="Tidy Apps builds focused iOS apps that solve one problem and solve it extremely well. No accounts. No tracking. No nonsense."
+>
+  <Nav />
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <h1 class="hero-headline">Apps that do one thing.<br />Perfectly.</h1>
+        <p class="hero-subhead">
+          Tidy Apps builds focused iOS apps with privacy at their core. No accounts.
+          No tracking. No nonsense.
+        </p>
+      </div>
+    </section>
+
+    <!-- Apps -->
+    <section class="apps" id="apps">
+      <div class="container">
+        <div class="apps-grid">
+          <AppCard
+            iconSrc="/images/hadit-icon.png"
+            iconAlt="HadIt? app icon"
+            name="HadIt?"
+            description="Track everything you own, entirely on your device. No cloud. No account. No data leaving your phone."
+            appStoreUrl="https://apps.apple.com/us/app/had-it-own-it-know-it/id6774524459"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Privacy note -->
+    <section class="privacy-note">
+      <div class="container">
+        <p class="privacy-note-text">
+          This website collects nothing about you either. No cookies. No analytics.
+          No third-party scripts. The site is as private as the apps.
+        </p>
+      </div>
+    </section>
+
+    <!-- Values -->
+    <section class="values">
+      <div class="container">
+        <div class="values-grid">
+          <div class="value-item">
+            <p class="value-text">One problem. Solved well.</p>
+          </div>
+          <div class="value-divider"></div>
+          <div class="value-item">
+            <p class="value-text">Privacy by default.</p>
+          </div>
+          <div class="value-divider"></div>
+          <div class="value-item">
+            <p class="value-text">Native iOS. Always.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Base>
+
+<style>
+  /* Hero */
+  .hero {
+    padding: 100px 0 80px;
+    text-align: center;
+  }
+
+  .hero-headline {
+    font-size: clamp(42px, 6vw, 72px);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    color: var(--color-text);
+    margin-bottom: 24px;
+  }
+
+  .hero-subhead {
+    font-size: clamp(18px, 2.2vw, 21px);
+    color: var(--color-text-secondary);
+    max-width: 540px;
+    margin: 0 auto;
+    line-height: 1.55;
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      padding: 64px 0 48px;
+    }
+  }
+
+  /* Apps grid */
+  .apps {
+    background: var(--color-bg);
+  }
+
+  .apps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  /* Privacy note */
+  .privacy-note {
+    text-align: center;
+    padding: 48px 0;
+  }
+
+  .privacy-note-text {
+    font-size: 15px;
+    color: var(--color-text-secondary);
+    max-width: 480px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  /* Values */
+  .values {
+    background: var(--color-surface);
+  }
+
+  .values-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .value-item {
+    flex: 1;
+    padding: 0 24px;
+  }
+
+  .value-text {
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--color-text);
+    line-height: 1.4;
+  }
+
+  .value-divider {
+    width: 1px;
+    height: 40px;
+    background: var(--color-border);
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 600px) {
+    .values-grid {
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .value-divider {
+      width: 40px;
+      height: 1px;
+    }
+
+    .value-item {
+      padding: 0;
+    }
+  }
+</style>

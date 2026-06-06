@@ -1,0 +1,189 @@
+---
+import Base from '../../layouts/Base.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+
+const faqs = [
+  {
+    q: 'I deleted the app and lost my items. Can I get them back?',
+    a: 'Unfortunately no. HadIt? stores everything locally on your device. When the app is deleted, the data goes with it. To protect your list going forward, keep your iPhone backed up via iCloud or your Mac — this backs up HadIt? data automatically.',
+  },
+  {
+    q: 'I got a new phone. How do I transfer my items?',
+    a: 'Restore your new iPhone from an iCloud or Mac backup of your old phone. Your HadIt? data is included in that backup and will be restored automatically.',
+  },
+  {
+    q: 'Do I need to pay again on my new phone?',
+    a: 'No. HadIt? is a one-time purchase tied to your Apple ID. Sign in with the same Apple ID on your new device, open the App Store, and download HadIt? at no charge.',
+  },
+  {
+    q: 'Can I use HadIt? on multiple devices?',
+    a: 'Yes — download it on any device sharing the same Apple ID and it\'s free. Note that your items are stored per device. There is no sync between devices; that\'s by design, and it\'s on our roadmap.',
+  },
+  {
+    q: 'Does HadIt? work without internet?',
+    a: 'Yes, completely. HadIt? is fully offline. No internet connection is ever required to use the app.',
+  },
+];
+---
+
+<Base
+  title="Support — HadIt? | Tidy Apps"
+  description="Support for HadIt? — common questions answered, and a direct line to our team."
+>
+  <Nav />
+
+  <main>
+    <div class="prose">
+      <header class="page-header">
+        <h1>HadIt? Support</h1>
+        <p class="intro">
+          Need help? Have a question? We're a small team and we read every message.
+        </p>
+      </header>
+
+      <section class="faq-section">
+        <h2 class="section-label">Common questions</h2>
+        <div class="faq-list">
+          {faqs.map(item => (
+            <div class="faq-item">
+              <h3 class="faq-q">{item.q}</h3>
+              <p class="faq-a">{item.a}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section class="contact-section">
+        <div class="contact-card">
+          <p class="contact-heading">Still stuck?</p>
+          <p class="contact-body">
+            Email us at{' '}
+            <a href="mailto:hello@tidy-apps.com">hello@tidy-apps.com</a>.
+            We read and reply to every message.
+          </p>
+        </div>
+      </section>
+
+      <div class="bottom-links">
+        <a href="/privacy/hadit">Privacy Policy</a>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</Base>
+
+<style>
+  main {
+    padding: var(--section-y) 0;
+  }
+
+  .page-header {
+    margin-bottom: 56px;
+  }
+
+  h1 {
+    font-size: clamp(32px, 4.5vw, 48px);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--color-text);
+    margin-bottom: 16px;
+  }
+
+  .intro {
+    font-size: 19px;
+    color: var(--color-text-secondary);
+    line-height: 1.55;
+  }
+
+  /* FAQ */
+  .faq-section {
+    margin-bottom: 56px;
+    padding: 0;
+  }
+
+  .section-label {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-text-secondary);
+    margin-bottom: 24px;
+    line-height: 1;
+  }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .faq-item {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-small);
+    padding: 24px 28px;
+  }
+
+  .faq-q {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-text);
+    letter-spacing: -0.01em;
+    margin-bottom: 10px;
+    line-height: 1.35;
+  }
+
+  .faq-a {
+    font-size: 15px;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+  }
+
+  /* Contact card */
+  .contact-section {
+    padding: 0;
+    margin-bottom: 40px;
+  }
+
+  .contact-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    padding: 32px;
+  }
+
+  .contact-heading {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-text);
+    letter-spacing: -0.01em;
+    margin-bottom: 8px;
+  }
+
+  .contact-body {
+    font-size: 17px;
+    color: var(--color-text-secondary);
+    line-height: 1.55;
+  }
+
+  .contact-body a {
+    color: var(--color-accent);
+  }
+
+  /* Bottom links */
+  .bottom-links {
+    font-size: 14px;
+  }
+
+  .bottom-links a {
+    color: var(--color-text-secondary);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .bottom-links a:hover {
+    color: var(--color-text);
+  }
+</style>

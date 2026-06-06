@@ -1,0 +1,88 @@
+---
+interface Props {
+  iconSrc: string;
+  iconAlt: string;
+  name: string;
+  description: string;
+  appStoreUrl: string;
+}
+
+const { iconSrc, iconAlt, name, description, appStoreUrl } = Astro.props;
+---
+
+<article class="app-card">
+  <img src={iconSrc} alt={iconAlt} class="app-icon" width="120" height="120" />
+  <div class="app-meta">
+    <h3 class="app-name">{name}</h3>
+    <p class="app-description">{description}</p>
+  </div>
+  <a
+    href={appStoreUrl}
+    class="badge-link"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label={`Download ${name} on the App Store`}
+  >
+    <img
+      src="/images/app-store-badge.svg"
+      alt="Download on the App Store"
+      class="badge-img"
+    />
+  </a>
+</article>
+
+<style>
+  .app-card {
+    background: var(--color-surface);
+    border-radius: var(--radius-card);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-card);
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .app-icon {
+    width: 120px;
+    height: 120px;
+    border-radius: 22%;
+    flex-shrink: 0;
+  }
+
+  .app-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+  }
+
+  .app-name {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-text);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+
+  .app-description {
+    font-size: 17px;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+  }
+
+  .badge-link {
+    display: inline-flex;
+    align-self: flex-start;
+  }
+
+  .badge-link:hover {
+    opacity: 0.80;
+    text-decoration: none;
+  }
+
+  .badge-img {
+    height: 40px;
+    width: auto;
+  }
+</style>

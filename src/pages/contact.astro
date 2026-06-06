@@ -1,0 +1,93 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Base
+  title="Contact — Tidy Apps"
+  description="Get in touch with Tidy Apps. We're a small indie studio and we read every message."
+>
+  <Nav />
+
+  <main>
+    <div class="prose">
+      <header class="page-header">
+        <h1>Say hello.</h1>
+      </header>
+
+      <p class="intro">
+        We're a small indie studio. We read and reply to every message.
+      </p>
+
+      <a href="mailto:hello@tidy-apps.com" class="email-link">
+        hello@tidy-apps.com
+      </a>
+
+      <p class="support-note">
+        For app support, visit the{' '}
+        <a href="/support/hadit">support page for HadIt?</a>.
+      </p>
+    </div>
+  </main>
+
+  <Footer />
+</Base>
+
+<style>
+  main {
+    padding: var(--section-y) 0;
+    min-height: calc(100dvh - 56px - 88px);
+  }
+
+  .page-header {
+    margin-bottom: 24px;
+  }
+
+  h1 {
+    font-size: clamp(36px, 5vw, 60px);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--color-text);
+  }
+
+  .intro {
+    font-size: 19px;
+    color: var(--color-text-secondary);
+    line-height: 1.55;
+    margin-bottom: 40px;
+  }
+
+  .email-link {
+    display: inline-block;
+    font-size: clamp(24px, 3.5vw, 36px);
+    font-weight: 600;
+    color: var(--color-accent);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+    margin-bottom: 48px;
+    transition: opacity 0.15s ease;
+  }
+
+  .email-link:hover {
+    opacity: 0.75;
+    text-decoration: none;
+  }
+
+  .support-note {
+    font-size: 15px;
+    color: var(--color-text-secondary);
+    padding-top: 32px;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .support-note a {
+    color: var(--color-text-secondary);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .support-note a:hover {
+    color: var(--color-text);
+  }
+</style>

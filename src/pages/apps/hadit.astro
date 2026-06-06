@@ -1,0 +1,270 @@
+---
+import Base from '../../layouts/Base.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Base
+  title="HadIt? — Track Everything You Own | Tidy Apps"
+  description="HadIt? lets you track everything you own, entirely on your device. No cloud, no account, no data leaving your phone."
+>
+  <Nav />
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-inner">
+          <img
+            src="/images/hadit-icon.png"
+            alt="HadIt? app icon"
+            class="app-icon"
+            width="120"
+            height="120"
+          />
+          <div class="hero-text">
+            <h1>HadIt?</h1>
+            <p class="tagline">Everything you own. Always at hand.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Description -->
+    <section class="description">
+      <div class="prose">
+        <p>
+          HadIt? is a personal inventory app for people who want to know what they own.
+          Add items, attach photos, organise by category, and search across your entire
+          collection in seconds. It's calm, fast, and stays out of your way.
+        </p>
+        <p>
+          Whether you're tracking tools in a garage, books on a shelf, or gear in a bag,
+          HadIt? keeps a record that's always on your device and always available —
+          even without a connection.
+        </p>
+        <p>
+          There are no feeds, no badges, no engagement mechanics. Just a clear list of
+          the things you own, organised the way you want them.
+        </p>
+      </div>
+    </section>
+
+    <!-- Privacy block -->
+    <section class="privacy-block">
+      <div class="prose">
+        <div class="privacy-card">
+          <h2>Your data never leaves your device.</h2>
+          <ul class="privacy-list">
+            <li>No data collected</li>
+            <li>No analytics</li>
+            <li>No ads</li>
+            <li>No account required</li>
+            <li>No cloud sync</li>
+            <li>Works completely offline</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Built with native iOS -->
+    <section class="native-section">
+      <div class="prose">
+        <h2 class="native-heading">Built for iOS. Properly.</h2>
+        <p class="native-body">
+          HadIt? is built entirely with native iOS technologies — SwiftUI, CoreData, and
+          PhotosUI. No cross-platform frameworks. No web views. Just iOS, done right.
+          That means it's fast, it respects system settings, and it feels like it belongs
+          on your phone — because it was made for it.
+        </p>
+      </div>
+    </section>
+
+    <!-- Download -->
+    <section class="download-section">
+      <div class="container">
+        <a
+          href="https://apps.apple.com/us/app/had-it-own-it-know-it/id6774524459"
+          class="download-btn"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Download HadIt? on the App Store"
+        >
+          <img
+            src="/images/app-store-badge.svg"
+            alt="Download on the App Store"
+            class="badge-large"
+          />
+        </a>
+      </div>
+    </section>
+
+    <!-- Bottom links -->
+    <div class="bottom-links prose">
+      <a href="/privacy/hadit">Privacy Policy</a>
+      <span class="sep">&middot;</span>
+      <a href="/support/hadit">Support</a>
+    </div>
+  </main>
+
+  <Footer />
+</Base>
+
+<style>
+  /* Hero */
+  .hero {
+    padding: 80px 0 56px;
+  }
+
+  .hero-inner {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .app-icon {
+    width: 120px;
+    height: 120px;
+    border-radius: 22%;
+    flex-shrink: 0;
+  }
+
+  .hero-text h1 {
+    font-size: clamp(40px, 5vw, 60px);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--color-text);
+    margin-bottom: 8px;
+  }
+
+  .tagline {
+    font-size: 21px;
+    color: var(--color-text-secondary);
+    line-height: 1.4;
+  }
+
+  @media (max-width: 500px) {
+    .hero-inner {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+    }
+  }
+
+  /* Description */
+  .description .prose {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .description p {
+    font-size: 18px;
+    line-height: 1.65;
+    color: var(--color-text-secondary);
+  }
+
+  /* Privacy block */
+  .privacy-block {
+    background: var(--color-surface);
+  }
+
+  .privacy-card {
+    padding: 40px;
+    background: var(--color-surface);
+    border-radius: var(--radius-card);
+    border: 1px solid var(--color-border);
+  }
+
+  .privacy-card h2 {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--color-text);
+    letter-spacing: -0.02em;
+    margin-bottom: 28px;
+  }
+
+  .privacy-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .privacy-list li {
+    font-size: 17px;
+    color: var(--color-text-secondary);
+    padding-left: 28px;
+    position: relative;
+  }
+
+  .privacy-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: 600;
+  }
+
+  /* Native iOS */
+  .native-heading {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--color-text);
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+  }
+
+  .native-body {
+    font-size: 18px;
+    line-height: 1.65;
+    color: var(--color-text-secondary);
+  }
+
+  /* Download */
+  .download-section {
+    text-align: center;
+    padding-top: 0;
+    padding-bottom: var(--section-y);
+  }
+
+  .download-btn {
+    display: inline-flex;
+    align-items: center;
+    transition: opacity 0.15s ease;
+  }
+
+  .download-btn:hover {
+    opacity: 0.75;
+    text-decoration: none;
+  }
+
+  .badge-large {
+    height: 56px;
+    width: auto;
+  }
+
+  /* Bottom links */
+  .bottom-links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    padding-bottom: var(--section-y);
+  }
+
+  .bottom-links a {
+    color: var(--color-text-secondary);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .bottom-links a:hover {
+    color: var(--color-text);
+  }
+
+  .sep {
+    color: var(--color-border);
+  }
+</style>
